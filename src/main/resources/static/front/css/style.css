@@ -1,0 +1,17 @@
+html, body {height: 100%}
+
+
+a{text-decoration:none;}
+a:visited{color:#000}
+
+header{display:flex;height:59px; border-bottom: 1px solid #CCC}
+header h1{width:200px;padding:18px 0;font-size:24px;font-weight:bold;text-align:center;}
+header nav{padding:18px 0;}
+
+main, section{height: calc(100% - 100px);}
+footer{padding: 11px 12px 12px 12px; border-top: 1px solid #CCC;}
+
+.tbl_header, .tbl_data{display: flex;}
+.tbl_cell_no{width: 80px; text-align: center}
+.tbl_cell_title{width: calc(100% - 230px); text-align: center}
+.tbl_cell_reg_date{width: 150px; text-align: center}

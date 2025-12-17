@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout}">
+
+<section layout:fragment="content">
+  <h2>게시글 목록</h2>
+  <a href="/board/register">게시글 등록</a>
+
+  <ul class="tbl_header">
+    <li class="tbl_cell_no">번호</li>
+    <li class="tbl_cell_title">제목</li>
+    <li class="tbl_cell_reg_date">등록일자</li>
+  </ul>
+
+  <ul class="tbl_data" th:each="data : ${result.data_list}">
+
+    <li class="tbl_cell_no">
+      <span th:text="${data.reg_no}"></span><br>
+    </li>
+    <li class="tbl_cell_title">
+      <a href="/board/detail/" th:attrappend="href=${data.reg_no}"></a>
+      <span th:text="${data.title}"></span><br>
+    </li>
+    <li class="tbl_cell_reg_date">
+      <span th:text="${data.reg_date}">RegDate</span>
+    </li>
+
+  </ul>
+
+</section>
+
+</html>
